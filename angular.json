@@ -24,12 +24,23 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets",
+                "output": "/assets"
+           
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.6.0.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/mammoth/mammoth.browser.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,12 +105,22 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-3.6.0.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/angular-long-press/dist/angular-long-press.js",
+              "src/assets/longpress/angular-long-press.min.js",
+              "node_modules/mammoth/mammoth.browser.min.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "e8419013-da08-4ac3-9664-3b8a96f10985"
   }
 }
